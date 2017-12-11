@@ -1,15 +1,15 @@
 command:
   reg:
-    name_duplicate: "指定的银行名称已存在"
+    name_duplicate: "您所输入的名称已被占用"
     established: "(#%d) 银行 `%s&r` 创建成功，ID 为 {%s}"
-    not_enough_capital: "玩家没有足够的现金用于创建银行"
+    not_enough_capital: "您的余额不足以成立银行"
   top:
     list_item: "%3d. %s&r(%.2f) {%s}"
   list_my:
     list_item: "银行：%s&r 存款：%.2f 贷款：%.2f"
-    empty_list: "你尚未开立任何银行账户"
+    empty_list: "您尚未在任何银行开户"
   bankrupt:
-    player_not_found: "找不到指定的玩家"
+    player_not_found: "查无此人"
     bank_not_found: "找不到指定的银行，或结果不唯一"
   reload:
     complete: "重新加载成功"
@@ -38,57 +38,57 @@ command:
       下期利息类型：%s
   bank_interest:
     no_such_bank: "找不到指定的银行，或结果不唯一"
-    only_self: "你没有权限执行此操作"
-    rate_out_of_range: "利率超出允许的范围：[%.2f, %.2f]"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    only_self: "您无法执行此操作"
+    rate_out_of_range: "您所设定的利率超过允许值：[%.2f, %.2f]"
+    bankrupted: "银行已破产，您的操作无法完成"
   bank_customers:
     no_such_bank: "找不到指定的银行，或结果不唯一"
-    only_self: "你没有权限执行此操作"
+    only_self: "您无法执行此操作"
     customer_record: "%s：存款【%.2f】贷款【%.2f】"
-    no_customer: "暂无客户记录"
+    no_customer: "无来访记录"
   bank_vault:
     no_such_bank: "找不到指定的银行，或结果不唯一"
-    only_self: "你没有权限执行此操作"
-    vault_insufficient: "此银行的库存金没有足够的余额"
-    player_insufficient: "你没有足够的现金"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    only_self: "您无法执行此操作"
+    vault_insufficient: "金库结余不足"
+    player_insufficient: "现金余额不足"
+    bankrupted: "银行已破产，您的操作无法完成"
 
 user:
   deposit:
     invalid_amount: "存款金额无效"
-    not_enough_money: "你没有足够的现金"
+    not_enough_money: "现金余额不足"
     bank_not_found: "找不到指定的银行，或结果不唯一"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    bankrupted: "银行已破产，您的操作无法完成"
   withdraw:
     invalid_amount: "取款金额无效"
     bank_not_found: "找不到指定的银行，或结果不唯一"
-    not_enough_deposit: "取款金额超出了存款余额"
-    bank_run: "银行没有足够的资金"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    not_enough_deposit: "取款失败，余额不足"
+    bank_run: ""
+    bankrupted: "银行已破产，您的操作无法完成"
   loan:
     invalid_amount: "贷款金额无效"
     bank_not_found: "找不到指定的银行，或结果不唯一"
-    has_loan: "你尚未清偿上期贷款，暂不能申请新的贷款"
+    has_loan: "在您偿清贷款前我们无法向您放贷"
     not_enough_money_bank: "银行没有足够的资金"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    bankrupted: "银行已破产，您的操作无法完成"
   repay:
-    invalid_amount: "偿还金额无效"
-    bank_not_found: "找不到指定的银行，或结果不唯一"
+    invalid_amount: "您输入的金额有误，请重新输入"
+    bank_not_found: "找不到您输入的银行，请重新输入"
     no_need_to_pay: "数值超出了应偿还金额的上限"
-    not_enough_money: "你没有足够的现金"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    not_enough_money: "现金余额不足"
+    bankrupted: "银行已破产，您的操作无法完成"
   sign:
-    invalid_sign: "该银行业务牌无效"
-    invalid_number: "数值无效"
-    input_timeout: "输入超时，操作已取消"
-    loan_cancelled: "已取消贷款操作"
+    invalid_sign: "您所输入的值有误，请检查后重试"
+    invalid_number: "金额有误，请检查后重试"
+    input_timeout: "输入超时，感谢您的来访"
+    loan_cancelled: "贷款操作已取消"
     create_success: "银行业务牌创建成功"
-    create_fail: "设置银行业务牌失败"
+    create_fail: "银行业务牌创建失败"
     input_accepted: "交易已接受"
-    break_no_permission: "你不能破坏这个银行业务牌"
-    break_success: "撤销银行业务牌成功"
-    use_no_permission: "你没有权限使用这个银行业务牌"
-    bankrupted: "不能对指定的银行执行此操作，因为此银行已破产"
+    break_no_permission: "请勿损坏银行设施"
+    break_success: "您已取消银行业务牌"
+    use_no_permission: "与您进行的交易不被允许，请询问工作人员"
+    bankrupted: "银行已破产，您的操作无法完成"
 
     text_saving: "储蓄业务"
     text_withdraw: "取款业务"
@@ -106,8 +106,8 @@ user:
     input_prompt_repay: "请在 %d 秒内输入你要偿还的金额（或输入 ALL 偿还全部贷款）"
 
 manual:
-  no_description: "暂无介绍"
-  no_usage: "暂无用法说明"
+  no_description: "无描述"
+  no_usage: "无业务指南"
 
   help:
     description: "显示帮助信息"
